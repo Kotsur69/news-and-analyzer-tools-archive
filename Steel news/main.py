@@ -1,4 +1,5 @@
-﻿from scraper.scraper import scrape_article
+import time
+from scraper.scraper import scrape_article
 from analyzer.lm_analyzer import analyze_article
 from utils.storage import save_to_json, save_to_csv
 from utils.data_loader import load_all_documents
@@ -20,35 +21,52 @@ urls = [
 
 results = []
 
-results = []
-
 # 🔹 Ładujemy PDF + Excel RAZ
-extra_docs_chunks = load_all_documents(chunk_size=3000)
+extra_docs_chunks = load_all_documents(chunk_size=3000) or []
 
 for url in urls:
     article = scrape_article(url)
 
     # Łączymy artykuł + wszystkie chunk-i PDF/Excel
-    combined_text_chunks = [article.get("content", "")] + extra_docs_chunks
+    combined_chunks = [article.get("content", "")] + extra_docs_chunks
+
+    start_time = time.time()
+    analysis_parts = []
 
     # Analiza po chunkach
-    analysis_parts = []
-    for chunk in combined_text_chunks:
+    for i, chunk in enumerate(combined_chunks, 1):
         analysis_chunk = analyze_article(chunk)
         analysis_parts.append(analysis_chunk)
 
-    # Łączymy fragmenty w jedną analizę
+        # partial save po każdym chunku
+        partial_result = {
+            "url": article.get("url", url),
+            "title": article.get("title", ""),
+            "date": article.get("date", ""),
+            "chunk_index": i,
+            "analysis_so_far": "\n\n".join(analysis_parts)
+        }
+        save_to_json(results + [partial_result], filename="data/steel_news_partial.json")
+
+        # progress w konsoli
+        elapsed = time.time() - start_time
+        avg_time = elapsed / i
+        remaining = avg_time * (len(combined_chunks) - i)
+        print(f"[{article.get('title','Brak tytułu')}] Chunk {i}/{len(combined_chunks)} - "
+              f"Avg: {avg_time:.2f}s, Estimated remaining: {remaining:.2f}s")
+
+    # Łączymy fragmenty w pełną analizę
     full_analysis = "\n\n".join(analysis_parts)
 
     results.append({
-        "url": url,
+        "url": article.get("url", url),
         "title": article.get("title", ""),
         "date": article.get("date", ""),
         "analysis": full_analysis
     })
 
-# 🔹 Zapis wyników
-save_to_json(results)
-save_to_csv(results)
+# 🔹 Zapis wyników końcowych
+save_to_json(results, filename="data/steel_news_analysis.json")
+save_to_csv(results, filename="data/steel_news_analysis.csv")
 
 print("Gotowe! Wyniki zapisane w folderze data/")
