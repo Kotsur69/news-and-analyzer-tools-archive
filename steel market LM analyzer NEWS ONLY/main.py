@@ -29,8 +29,12 @@ def main():
         return
 
     analysis = analyze_with_local_llm(all_articles)
-    print("\n📊 ANALIZA RYNKU STALI:\n")
+    print("\n📊 AKTUALIZOWANA ANALIZA RYNKU STALI:\n")
     print(analysis)
+
+    with open("last_analysis.txt", "w", encoding="utf-8") as f:
+     f.write(analysis)
+
 
 if __name__ == "__main__":
     main()
