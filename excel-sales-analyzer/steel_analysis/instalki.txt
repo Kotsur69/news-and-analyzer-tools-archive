@@ -1,0 +1,47 @@
+python -m pip install pandas matplotlib numpy requests openpyxl
+pip install pandas matplotlib numpy requests openpyxl
+
+ LM Studio
+
+mistralai/ministral-3-14b-reasoning
+ Local Server
+
+port: 1234
+
+tryb: OpenAI-compatible
+
+Excel → analiza
+ wykresy roczne
+ prognoza 2026
+ raport pisany przez AI, np.:
+
+„Analiza danych z lat 2024–2025 wskazuje na wyraźny wzrost zakupów stali 4mm w okresie wiosennym. W obu latach miesiąc kwiecień charakteryzował się najwyższym wolumenem zakupów…"
+
+
+Potencjalne błędy
+ błąd FileNotFoundError
+ zła ścieżka do Excela
+
+ błąd Connection refused
+ LM Studio nie uruchomione
+
+ brak wykresów
+ sprawdź kolumny Excela
+
+ raport pusty
+ model nie załadowany
+
+Co dalej:
+model ARIMA - czyli autoregresywna zintegrowana srednia krocząca - czyli narzedzie do prognozowania. Analizuje zależności w historycznych danych i wykorzystuje te informacje do prognozowania przyszłych wartości. To, co wyróżnia ARIMA, to zdolność do modelowania różnych rodzajów danych szeregów czasowych, w tym tych z trendami i sezonowością, poprzez uwzględnienie składników autoregresji (AR), średniej ruchomej (MA) oraz różnicowania (I).
+ p - liczba opóźnień autoregresji, która mierzy wpływ poprzednich wartości w szeregu na obecną wartość.
+d - stopień różnicowania, który jest stosowany do uczynienia szeregu stacjonarnym, czyli stabilnym w czasie i bez trendów czy sezonowości.
+q - liczba opóźnień średniej ruchomej, która określa wpływ błędów prognozy z przeszłości na przyszłe prognozy.
+
+Model ARIMA może przynieść korzyści biznesowi na wiele sposobów:
+Prognozowanie sprzedaży: Dzięki prognozowaniu popytu firmy mogą lepiej zarządzać zapasami, planować produkcję i unikać niedoborów lub nadmiarów.
+Analiza finansowa: ARIMA jest wykorzystywana do prognozowania cen akcji, kursów walut i innych instrumentów finansowych, co pomaga w podejmowaniu decyzji inwestycyjnych.
+Planowanie budżetowe: Przedsiębiorstwa mogą wykorzystywać model ARIMA do przewidywania przepływów pieniężnych, przychodów i innych ważnych wskaźników finansowych, co ułatwia planowanie budżetu.
+Optymalizacja marketingu: Prognozy dotyczące efektów kampanii marketingowych i zachowań klientów pozwalają dostosować strategie marketingowe, aby osiągnąć lepsze wyniki.
+
+analiza po kupcach / regionach
+planowanie zapasów magazynowych
