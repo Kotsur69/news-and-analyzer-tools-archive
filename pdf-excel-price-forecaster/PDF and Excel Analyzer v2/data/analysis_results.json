@@ -1,0 +1,22 @@
+{
+  "monthly_analysis": {
+    "2025.01": {
+      "core": "Błąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.",
+      "context": "Błąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie."
+    },
+    "2025.02": {
+      "core": "Błąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.",
+      "context": "Błąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie.\n---\nBłąd w analizie."
+    }
+  },
+  "predictions_2026": {
+    "2026": {
+      "2025.01": {
+        "LLM_result": "Błąd w predykcji."
+      },
+      "2025.02": {
+        "LLM_result": "Błąd w predykcji."
+      }
+    }
+  }
+}

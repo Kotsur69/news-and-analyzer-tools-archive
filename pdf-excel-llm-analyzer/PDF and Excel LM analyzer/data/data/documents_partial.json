@@ -1,0 +1,34 @@
+[
+    {
+        "chunk_index": 1,
+        "analysis": {
+            "steel_type": "",
+            "thickness": "",
+            "predicted_price_range": "",
+            "prediction_horizon": "",
+            "confidence_score": 0,
+            "risk_score": 0,
+            "polish_market_impact": "",
+            "assumptions": [],
+            "risk_factors": [],
+            "created_at": "2026-01-12T10:01:45.686150",
+            "status": "active"
+        }
+    },
+    {
+        "chunk_index": 2,
+        "analysis": {
+            "steel_type": "",
+            "thickness": "",
+            "predicted_price_range": "",
+            "prediction_horizon": "",
+            "confidence_score": 0,
+            "risk_score": 0,
+            "polish_market_impact": "",
+            "assumptions": [],
+            "risk_factors": [],
+            "created_at": "2026-01-12T10:04:44.665790",
+            "status": "active"
+        }
+    }
+]

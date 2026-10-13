@@ -7,8 +7,8 @@ summarize the market and forecast price direction, then checking its own predict
 These seven tools were separate repos, built iteratively. Each one is the next step from
 the one before it. They're merged here with their commit history so the progression stays visible.
 
-> **Archived — not maintained.** Third-party market data (PDF/Excel reports) and generated
-> analysis output were removed from history. Bring your own input files.
+> **Archived — not maintained.** Sample input reports (PDF/Excel) and generated analysis output
+> are included in each folder so you can see what the tools consumed and produced.
 
 | Folder | What it does |
 |---|---|
